@@ -1,0 +1,56 @@
+using System;
+using System.Collections.Generic;
+using System.Linq; // Needed for sorting
+
+class Program
+{
+    static void Main()
+    {
+        List<double> numbers = new List<double>();
+        double sum = 0;
+        double minPositive = double.MaxValue;
+        double max = double.MinValue;
+
+        while (true)
+        {
+            Console.Write("Enter a number (0 to stop): ");
+            double input = double.Parse(Console.ReadLine());
+
+            if (input == 0)
+                break;
+
+            numbers.Add(input);
+
+            sum += input;
+
+            if (input > max)
+                max = input;
+
+            if (input > 0 && input < minPositive)
+                minPositive = input;
+        }
+
+        if (numbers.Count == 0)
+        {
+            Console.WriteLine("No numbers entered.");
+        }
+        else
+        {
+            double average = sum / numbers.Count;
+
+            Console.WriteLine("Sum: " + sum);
+            Console.WriteLine("Average: " + average);
+            Console.WriteLine("Largest Number: " + max);
+            Console.WriteLine("Smallest Positive Number: " + (minPositive == double.MaxValue ? "None" : minPositive));
+
+            numbers.Sort(); // Sort the list
+
+            Console.Write("Sorted Numbers: ");
+            foreach (double number in numbers)
+            {
+                Console.Write(number + " ");
+            }
+            Console.WriteLine();
+        }
+    }
+}

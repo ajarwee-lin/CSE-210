@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/ajarw/OneDrive/Desktop/FALL-2023/CSE 210/CSE-210",
-      "program": "c:/Users/ajarw/OneDrive/Desktop/FALL-2023/CSE 210/CSE-210/build/Debug/outDebug",
+      "cwd": "c:/Users/ajarw/OneDrive/Desktop/FALL-2023/CSE 210/Develop02/CSE-210",
+      "program": "c:/Users/ajarw/OneDrive/Desktop/FALL-2023/CSE 210/Develop02/CSE-210/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

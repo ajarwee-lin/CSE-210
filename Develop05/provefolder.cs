@@ -140,7 +140,7 @@ class Program
     static void Main()
     {
         // Example usage
-        User user = new User("JohnDoe");
+        User user = new User("JarweeLincoln");
 
         Goal simpleGoal = new SimpleGoal("Run a Marathon", 0);
         Goal eternalGoal = new EternalGoal("Read Scriptures", 0);

@@ -288,4 +288,23 @@ class EternalQuestManager
                 }
             }
 
-            // Load
+            // Load total score from file
+            using (StreamReader reader = new StreamReader("score.txt"))
+            {
+                string score = reader.ReadLine();
+                if (int.TryParse(score, out totalScore) == false)
+                {
+                    Console.WriteLine($"Invalid score in score file: {score}");
+                }
+            }
+        }
+        catch (FileNotFoundException)
+        {
+            Console.WriteLine("No saved data found. Starting fresh.");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"An error occurred while loading data: {ex.Message}");
+        }
+    }
+}
